@@ -11,7 +11,7 @@ stages {
 
   stage('test_stage') {
     steps {
-      echo "this is just for testing purpose !!"
+      echo "this is just for testing purpose !! !"
     }
   }
 
