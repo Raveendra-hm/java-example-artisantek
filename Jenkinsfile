@@ -12,6 +12,9 @@ stages {
   stage('test_stage') {
     steps {
       echo "this is just for testing purpose !! !"
+      echo "$PATH"
+      echo "this is the jenkins URL:${env.JENKINS_URL}"
+      echo "this is the build id: ${env.BUILD_ID}"
     }
   }
 
