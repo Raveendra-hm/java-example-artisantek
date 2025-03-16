@@ -29,7 +29,7 @@ stages {
   stage('build_stage') {
     steps {
       sh 'mvn clean package'
-      echo "$DB_HOST, $DB_NAME
+      echo "$DB_HOST, $DB_NAME"
     }
   }
 
