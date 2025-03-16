@@ -28,6 +28,8 @@ stages {
       echo "$PATH"
       echo "$DB_HOST, $DB_NAME, $DB_USERNAME, $DB_PASSWORD "
       echo "this is the jenkins URL:${env.JENKINS_URL}" 
+      echo "${branch}"
+      echo "${params.status}"
     }
   }
 
