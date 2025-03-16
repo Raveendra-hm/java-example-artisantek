@@ -24,7 +24,7 @@ stages {
   stage('deploy_stage') {
     steps {
       sh 'sudo cp target/*.war /opt/tomcat/apache-tomcat-9.0.68/webapps/'
-      echo "this is the latest change to trigger the pollSCM"
+      echo "this is the latest change to trigger through github webhook"
     }
   }
 
