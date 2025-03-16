@@ -6,6 +6,11 @@ pipeline {
     DB_USERNAME="root"
     DB_PASSWORD="root"
   }
+  parameters {
+  string defaultValue: 'dev', name: 'git_tag', trim: true
+  booleanParam defaultValue: true, name: 'status'
+  choice choices: ['dev', 'test', 'preprod'], name: 'branch'
+  }
 stages {
   stage('git_checkout') {
     steps {
