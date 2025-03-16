@@ -3,8 +3,6 @@ pipeline {
        label 'maven'
    }
   environment {
-    DB_HOST="172.30.26.35"
-    DB_NAME="mysql"
     DB_USERNAME="root"
     DB_PASSWORD="root"
   }
@@ -16,6 +14,10 @@ stages {
   }
 
   stage('test_stage') {
+    environment { 
+      DB_HOST="172.30.26.35"
+      DB_NAME="mysql"
+    }
     steps {
       echo "this is just for testing purpose !! !"
       echo "$PATH"
@@ -27,6 +29,7 @@ stages {
   stage('build_stage') {
     steps {
       sh 'mvn clean package'
+      echo "$DB_HOST, $DB_NAME
     }
   }
 
